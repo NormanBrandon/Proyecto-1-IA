@@ -15,6 +15,8 @@ def IsValid(Asig):
 	return 1	
 
 def GetAsig(prof):
+	global costmin
+
 	if prof < len(Alumnos):
 		for i in examenes:
 			Asignacion[Alumnos[prof]] = i
@@ -24,26 +26,26 @@ def GetAsig(prof):
 			costoactual = cost(Asignacion)
 			if  costoactual < costmin:
 				costmin = costoactual
-				#print(Asignacion)
-				bestAsig = Asignacion
+				print(Asignacion)
+				print(costoactual)
+				
 			
 
 
-#Problema ={
-#	'Juan':['Jorge','Diana'],
-#	'Jorge':['Juan','Laura'],
-#	'Diana':['Jorge'],
-#	'Laura':['Jorge'],
-#	'Carlos':[]
-#}
 Problema ={
 	'Juan':['Jorge','Diana'],
-	'Jorge':['Juan'],
-	'Diana':['Juan'],
+	'Jorge':['Juan','Laura'],
+	'Diana':['Jorge'],
+	'Laura':['Jorge'],
+	'Carlos':[]
 }
+#Problema ={
+#	'Juan':['Jorge','Diana'],
+#	'Jorge':['Juan'],
+#	'Diana':['Juan'],
+#}
 
 examenes=[]
-bestAsig = {}
 
 Asignacion = {}
 
@@ -58,4 +60,3 @@ for alumno in Problema.keys(): #inicializamos el diccionario de asignaciones con
 costmin =len(examenes)
 
 GetAsig(0)
-print(bestAsig)
