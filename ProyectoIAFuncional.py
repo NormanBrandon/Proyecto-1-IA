@@ -26,8 +26,8 @@ def GetAsig(prof):
 			costoactual = cost(Asignacion)
 			if  costoactual < costmin:
 				costmin = costoactual
-				print(Asignacion)
-				print(costoactual)
+				print("Una asignación optima es: "+str(Asignacion))
+				print("Su costo : " + str(costoactual))
 				
 			
 
