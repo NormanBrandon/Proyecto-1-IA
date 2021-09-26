@@ -35,7 +35,7 @@ def GetAsig(prof):
 Problema ={
 	'Juan':['Jorge','Diana'],
 	'Jorge':['Juan','Laura'],
-	'Diana':['Jorge'],
+	'Diana':['Juan'],
 	'Laura':['Jorge'],
 	'Carlos':[]
 }
