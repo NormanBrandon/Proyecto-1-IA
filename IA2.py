@@ -1,5 +1,5 @@
-from queue import Queue
-
+##Este programa obtiene todos los nodos hoja del árbol de estados, es decir, todas las asignaciones completas
+## Lo hace para 3 alumnos dado que solo hay 3 ciclos for anidados
 examenes=[1,2,3]#lista de exámenes
 Asignacion = {}#inicialización de diccionario de asignación vacio
 Problema = {

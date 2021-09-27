@@ -8,7 +8,7 @@ def GetAsig(prof):# Funcion recursiva búsqueda en profundidad
 	else:					# si la profundidad es máxima tenemos una asignación completa (se ha asignado un examen a cada alumno)
 		print(Asignacion) # Imprimimos la asignación completa 
 	
-	
+		
 examenes=[1,2,3]
 Problema ={
 	'Juan':['Jorge','Diana'],

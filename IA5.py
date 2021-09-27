@@ -1,3 +1,5 @@
+#Esta funcion combina el programa anterior agregando una prueba de validez de asignación
+# es lo mismo que IA3.py pero para n alumnos
 def IsValid(Asig):
 	for alumno in Alumnos:
 		for friend in Problema.get(alumno):
@@ -11,7 +13,7 @@ def GetAsig(prof):
 			Asignacion[Alumnos[prof]] = i
 			GetAsig(prof +1) 
 	else:
-		if IsValid(Asignacion):
+		if IsValid(Asignacion):# Si la asignación es válida la imprime
 			print(Asignacion)
 		
 

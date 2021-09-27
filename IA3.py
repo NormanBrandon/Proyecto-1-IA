@@ -1,3 +1,7 @@
+##Este programa obtiene todos los nodos hoja del árbol de estados, es decir, todas las asignaciones completas
+## Lo hace para 3 alumnos dado que solo hay 3 ciclos for anidados
+## tambien se implementa una funcion de testeo si las asignaciones son válidas para las restricciones dadas en el problema
+
 def IsValid(Asig):	#testea si una asignación cumple con las restricciones
 	for alumno in Alumnos:	# itera sobre todos los alumnos [Juan, Jorge,Diana]
 		for friend in Problema.get(alumno): # obtiene los amigos del alumno en ese momento
@@ -25,7 +29,7 @@ for i in examenes:
 		Asignacion['Jorge'] = j	
 		for k in examenes:
 			Asignacion['Diana'] = k
-			if (IsValid(Asignacion)):
+			if (IsValid(Asignacion)):	#Si la asignación es válida la imprime	
 				print(Asignacion)
 
 		print()
