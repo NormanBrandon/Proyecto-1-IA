@@ -1,6 +1,6 @@
 def cost(Asig):
-	numexa =[]
-	for alumno in Alumnos:
+	numexa =[] #lista con asignaciones distintas [5, 2, 1, 4] = 4
+	for alumno in Alumnos: #Iteramos en [Juan, Jorge, Diana, laura, Carlos]
 		if Asig.get(alumno) not in numexa:
 			numexa.append(Asig.get(alumno))
 

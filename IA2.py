@@ -5,8 +5,7 @@ amigos =[]
 alumnos_visitados =[]
 Asignacion = {}
 
-Alumnos = 
-{
+Alumnos = {
 	'Juan':['Jorge','Diana'],
 	'Jorge':['Juan'],
 	'Diana':['Juan'],

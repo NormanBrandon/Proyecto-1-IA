@@ -15,7 +15,7 @@ def GetAsig(prof):
 			print(Asignacion)
 		
 
-examenes=[1,2,3]
+examenes=[1,2,3,4,5]
 Problema ={
 	'Juan':['Jorge','Diana'],
 	'Jorge':['Juan','Laura'],
