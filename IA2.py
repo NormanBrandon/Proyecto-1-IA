@@ -11,7 +11,7 @@ Problema = {
 for node in Problema.keys(): #inicializamos el diccionario de asignaciones con los alumnos, asignando 0 a todos (no se ha asignado examen)
 	Asignacion[node] = 0 # Asigna 0 a cada alumno, donde node el es alumno, rellena el diccionario
 
-print(Asignacion)#imprime ['Juan':1,'Jorge':0,'Diana':0], el diccionario tiene el formato adecuado en este punto
+print(Asignacion)#imprime ['Juan':0,'Jorge':0,'Diana':0], el diccionario tiene el formato adecuado en este punto
 	 
 for i in examenes: #iteramos 3 veces; i itera en la lista [1 2 3]
 	Asignacion['Juan'] = i #asignamos el valor de i a Juan en el diccionario de asignacion
