@@ -1,9 +1,9 @@
-def IsValid(Asig):
-	for alumno in Alumnos:
-		for friend in Problema.get(alumno):
-			if Asig.get(friend) == Asig.get(alumno):
-				return 0
-	return 1			
+def IsValid(Asig):	#testea si una asignación cumple con las restricciones
+	for alumno in Alumnos:	# itera sobre todos los alumnos [Juan, Jorge,Diana]
+		for friend in Problema.get(alumno): # obtiene los amigos del alumno en ese momento
+			if Asig.get(friend) == Asig.get(alumno): #compara el examen asignado de un amigo con el alumno
+				return 0				#si 2 amigos tienen el mismo examen se habrán violado las restricciones, por lo tanto la funcion devuelve 0
+	return 1 # si ningún par de amigos han tenido el mismo examen, devuelve 1
 			
 
 examenes=[1,2,3]
@@ -13,10 +13,10 @@ Problema ={
 	'Diana':['Juan'],}
 
 Asignacion = {}
-Alumnos = list(Problema.keys()) #Lista que contiene los alumnos [Juan, Jorge, Diana]
+Alumnos = list(Problema.keys())
 
 
-for node in Problema.keys(): #inicializamos el diccionario de asignaciones con los alumnos, asignando 0 a todos (no se ha asignado examen)
+for node in Problema.keys(): 
 	Asignacion[node] = 0
 	 
 for i in examenes:
