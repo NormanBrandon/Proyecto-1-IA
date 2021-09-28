@@ -1,10 +1,8 @@
-
 def cost(Asig):
 	numexa =[]
 	for alumno in Alumnos:
 		if Asig.get(alumno) not in numexa:
 			numexa.append(Asig.get(alumno))
-
 	costo = len(numexa)
 	return costo
 
@@ -35,7 +33,7 @@ def GetAsig(prof):
 			GetAsig(prof +1) 
 	else:
 		if IsValid(Asignacion):
-			if  cost(Asignacion) < getCostMin():
+			if  cost(Asignacion) <= getCostMin():
 				setCostmin(cost(Asignacion))
 				setBestAsig(Asignacion)
 				print("Una asignación optima es: "+str(getBestAsig()))
@@ -48,25 +46,19 @@ mejorAsig ={}
 examenes=[] # [1,2,3,4,5,.., N]
 Asignacion = {}
 Problema ={
-	'Juan':['Jorge','Diana','Carlos'],
-	'Jorge':['Juan','Laura'],
-	'Diana':['Juan','Laura','Josue'],
-	'Laura':['Jorge','Diana'],
-	'Carlos':['Juan'],
-	'Josue':['Diana','America'],
-	'America':['Josue'],
-	'Oscar':[]
-
+	'Juan':['Jorge','Diana'],
+	'Jorge':['Juan','Diana'],
+	'Diana':['Juan','Jorge']
 }
 
-Alumnos = list(Problema.keys())#Hacemos una lista con los alumnos 
+Alumnos = list(Problema.keys()) 
 i=0
-for alumno in Problema.keys(): #inicializamos el diccionario de asignaciones con los alumnos, asignando 0 a todos (no se ha asignado examen)
+for alumno in Problema.keys(): 
 	Asignacion[alumno] = 0 
 	i = i +1
-	examenes.append(i) #llenamos la lista de examenes
+	examenes.append(i) 
 
-costmin =len(examenes)
+costmin =len(examenes) +1
 
 GetAsig(0)
 fin = time.time()

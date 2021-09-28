@@ -1,10 +1,10 @@
 def cost(Asig):
-	numexa =[] #lista con asignaciones distintas [5, 2, 1, 4] = 4
-	for alumno in Alumnos: #Iteramos en [Juan, Jorge, Diana, laura, Carlos]
-		if Asig.get(alumno) not in numexa:
-			numexa.append(Asig.get(alumno))
+	exdif =[] #lista vacia llamada examenes distintos abreviado
+	for alumno in Alumnos: 
+		if Asig.get(alumno) not in exdif: #si el examen asignado al alumno N no esta en la lista, agregarlo
+			exdif.append(Asig.get(alumno))
 
-	costo = len(numexa)
+	costo = len(exdif)#exdif contendra solo examenes distintos, no repetidos, por lo tanto su longitud es el numero de examenes asignados y eso corresponde al coste
 	return costo
 
 def IsValid(Asig):
@@ -13,7 +13,7 @@ def IsValid(Asig):
 			if Asig.get(friend) == Asig.get(alumno):
 				return 0
 	return 1	
-
+	
 def GetAsig(prof):
 	if prof < len(Alumnos):
 		for i in examenes:
@@ -24,7 +24,6 @@ def GetAsig(prof):
 			print(Asignacion)
 			print(cost(Asignacion))
 		
-
 
 Problema ={
 	'Juan':['Jorge','Diana'],
