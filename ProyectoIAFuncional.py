@@ -29,7 +29,6 @@ def setBestAsig(value):
 	mejorAsig = value
 
 def GetAsig(prof):
-
 	if prof < len(Alumnos):
 		for i in examenes:
 			Asignacion[Alumnos[prof]] = i
@@ -41,27 +40,28 @@ def GetAsig(prof):
 				setBestAsig(Asignacion)
 				print("Una asignación optima es: "+str(getBestAsig()))
 				print("Su costo : " + str(cost(getBestAsig())))
-				
-
+			
+import time
+inicio = time.time()	
+#Declaracion de variables y del problema
 mejorAsig ={}
-
+examenes=[] # [1,2,3,4,5,.., N]
+Asignacion = {}
 Problema ={
-	'Juan':['Jorge','Diana'],
-	'Jorge':['Juan'],
-	'Diana':['Juan'],
+'Luis':[],
+	'Maria':[]
 }
 
-examenes=[] # [1,2,3,4,5]
-
-Asignacion = {}
 
 Alumnos = list(Problema.keys())#Hacemos una lista con los alumnos 
 i=0
 for alumno in Problema.keys(): #inicializamos el diccionario de asignaciones con los alumnos, asignando 0 a todos (no se ha asignado examen)
 	Asignacion[alumno] = 0 
 	i = i +1
-	examenes.append(i)
+	examenes.append(i) #llenamos la lista de examenes
 
-costmin =100000#5
+costmin =len(examenes)
 
 GetAsig(0)
+fin = time.time()
+print("tiempo de ejecución: "+str(fin-inicio)) 
