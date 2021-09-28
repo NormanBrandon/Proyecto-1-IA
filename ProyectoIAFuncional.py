@@ -48,10 +48,16 @@ mejorAsig ={}
 examenes=[] # [1,2,3,4,5,.., N]
 Asignacion = {}
 Problema ={
-'Luis':[],
-	'Maria':[]
-}
+	'Juan':['Jorge','Diana','Carlos'],
+	'Jorge':['Juan','Laura'],
+	'Diana':['Juan','Laura','Josue'],
+	'Laura':['Jorge','Diana'],
+	'Carlos':['Juan'],
+	'Josue':['Diana','America'],
+	'America':['Josue'],
+	'Oscar':[]
 
+}
 
 Alumnos = list(Problema.keys())#Hacemos una lista con los alumnos 
 i=0

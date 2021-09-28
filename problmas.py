@@ -1,9 +1,11 @@
 Problema ={
 	'Juan':['Jorge','Diana','Carlos'],
 	'Jorge':['Juan','Laura'],
-	'Diana':['Juan','Laura'],
+	'Diana':['Juan','Laura','Jose'],
 	'Laura':['Jorge','Diana'],
-	'Carlos':['Juan']
+	'Carlos':['Juan'],
+	'Josue':['Diana']
+
 }
 Problema ={
 	'Juan':['Jorge','Diana'],
@@ -13,6 +15,27 @@ Problema ={
 Problema ={
 'Luis':[],
 	'Maria':[]
+}
+Problema ={
+	'Juan':['Jorge','Diana','Carlos'],
+	'Jorge':['Juan','Laura'],
+	'Diana':['Juan','Laura','Josue'],
+	'Laura':['Jorge','Diana'],
+	'Carlos':['Juan'],
+	'Josue':['Diana','America'],
+	'America':['Josue'],
+
+}
+Problema ={
+	'Juan':['Jorge','Diana','Carlos'],
+	'Jorge':['Juan','Laura'],
+	'Diana':['Juan','Laura','Josue'],
+	'Laura':['Jorge','Diana'],
+	'Carlos':['Juan'],
+	'Josue':['Diana','America'],
+	'America':['Josue'],
+	'Oscar':[]
+
 }
 Problema ={
 	'Laura':['Jorge','Juan','Nancy'],
@@ -26,6 +49,7 @@ Problema ={
 	'Axel':['Liliana','Jorge','Jose'],
 	'Fernanda':['Jose','Liliana','Carlos']
 }
+
 Problema ={
 	'Laura':['Jorge','Ana'],
 	'Jose':['Diana','Gabriela'],
