@@ -33,7 +33,7 @@ def GetAsig(prof):
 			GetAsig(prof +1) 
 	else:
 		if IsValid(Asignacion):
-			if  cost(Asignacion) <= getCostMin():
+			if  cost(Asignacion) < getCostMin():
 				setCostmin(cost(Asignacion))
 				setBestAsig(Asignacion)
 				print("Una asignación optima es: "+str(getBestAsig()))
@@ -46,9 +46,10 @@ mejorAsig ={}
 examenes=[] # [1,2,3,4,5,.., N]
 Asignacion = {}
 Problema ={
-	'Juan':['Jorge','Diana'],
-	'Jorge':['Juan','Diana'],
-	'Diana':['Juan','Jorge']
+	'Juan':[],
+	'Jorge':[],
+	'Diana':[],
+	'Josue':[]
 }
 
 Alumnos = list(Problema.keys()) 
@@ -58,7 +59,7 @@ for alumno in Problema.keys():
 	i = i +1
 	examenes.append(i) 
 
-costmin =len(examenes) +1
+costmin =len(examenes) + 1
 
 GetAsig(0)
 fin = time.time()
